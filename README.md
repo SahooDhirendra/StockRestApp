@@ -48,7 +48,53 @@ Run `mvn --version` to verify that it is correctly installed.
  
 ## Running the Project
 
-Create a maven project and import the project to your workspace.
+Import the project to your workspace.
+
+Swagger is configured with this project to test the Application.
+
+Link for swagger in case running the application in Local system : 
+
+```
+http://localhost:8080/swagger-ui.html
+
+```
+
+Click on `Expand Operations` link to see test the APIs.
+
+Provided the input for Update operation to test this application.
+
+```
+{
+    "id": 1,
+    "name": "Dhirendra",
+    "currentPrice": 15000,
+    "lastUpdate": "2018-03-10T21:33:39.907+0000"
+  }
+  
+  ```
+  
+  Provided the input for Create operation to test this application.
+  
+  ```
+{
+    "name": "Dhirendra",
+    "currentPrice": 15000,
+    "lastUpdate": "2018-03-10T21:33:39.907+0000"
+  }
+  
+  ```
+
+Naming convention of REST APIs are the programming excercise document.
+
+Assume that you are running this application locally.
+
+Get List of Stocks: `http://localhost:8080/api/stocks`
+Get one Stock from List : `http://localhost:8080/api/stocks/1`
+Update one Stock: `http://localhost:8080/api/stocks/1`
+Create a Stock: `http://localhost:8080/api/stocks`
+
+On Application startup some dummy data is getting loaded through the StockLoader class.
+ 
 
 ### And coding style tests
 
