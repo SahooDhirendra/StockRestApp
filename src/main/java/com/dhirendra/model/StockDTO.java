@@ -6,19 +6,12 @@ package com.dhirendra.model;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 /**
  * @author dhirendra
  *
  */
-@Entity
-public class Stock {
+public class StockDTO {
 
-	@Id
-	@GeneratedValue
 	private Long id;
 	private String name;
 	private BigDecimal currentPrice;
@@ -54,18 +47,6 @@ public class Stock {
 
 	public void setLastUpdate(Timestamp lastUpdate) {
 		this.lastUpdate = lastUpdate;
-	}
-	
-	public Stock(Long id, String name, BigDecimal currentPrice, Timestamp lastUpdate) {
-
-		this.id = id;
-		this.name = name;
-		this.currentPrice = currentPrice;
-		this.lastUpdate = lastUpdate;
-	}
-
-	public Stock() {
-
 	}
 
 }
